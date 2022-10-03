@@ -6,26 +6,15 @@ const gifsOnlyOption = document.getElementById('gifs-only-option')
 const memeModalInner = document.getElementById('meme-modal-inner')
 const memeModal = document.getElementById('meme-modal')
 const memeModalCloseBtn = document.getElementById('meme-modal-close-btn')
-const modalBack = document.getElementById('modal-back')
 
 emotionRadios.addEventListener('change', highlightCheckedOption)
 memeModalCloseBtn.addEventListener('click', closeModal)
 getImageBtn.addEventListener('click', renderCat)
-
 memeModal.addEventListener('click', closeModalBack)
 
-function closeModalBack(e){
-    const isOutside = !e.target.closest(memeModalInner);
-    if (isOutside){
-        closeModal()
-    }
+function closeModalBack(){
+    memeModal.classList.display='none'
 }
-
-
-
-if(!e.target.closest("")){
-        memeModal.style.display = 'none'
-    }
 
 
 function highlightCheckedOption(e){
@@ -36,7 +25,10 @@ function highlightCheckedOption(e){
     document.getElementById(e.target.id).parentElement.classList.add('highlight')
 }
 
-function closeModal(){
+function closeModal(e){
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
     memeModal.style.display = 'none'
 
 }
