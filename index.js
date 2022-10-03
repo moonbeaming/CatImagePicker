@@ -11,11 +11,22 @@ const modalBack = document.getElementById('modal-back')
 emotionRadios.addEventListener('change', highlightCheckedOption)
 memeModalCloseBtn.addEventListener('click', closeModal)
 getImageBtn.addEventListener('click', renderCat)
-modalBack.addEventListener('click', closeModalBack)
 
-function closeModalBack(){
-    memeModal.style.display = 'none'
+memeModal.addEventListener('click', closeModalBack)
+
+function closeModalBack(e){
+    const isOutside = !e.target.closest(memeModalInner);
+    if (isOutside){
+        closeModal()
+    }
 }
+
+
+
+if(!e.target.closest("")){
+        memeModal.style.display = 'none'
+    }
+
 
 function highlightCheckedOption(e){
     const radios = document.getElementsByClassName('radio')
@@ -27,6 +38,7 @@ function highlightCheckedOption(e){
 
 function closeModal(){
     memeModal.style.display = 'none'
+
 }
 
 function renderCat(){
