@@ -24,10 +24,10 @@ function highlightCheckedOption(e){
     document.getElementById(e.target.id).parentElement.classList.add('highlight')
 }
 
-function closeModal(){
-    // e.preventDefault();
-    // e.stopPropagation();
-    // e.stopImmediatePropagation();
+function closeModal(e){
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
     memeModal.style.display = 'none'
 }
 
