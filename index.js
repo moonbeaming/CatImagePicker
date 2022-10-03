@@ -12,10 +12,10 @@ emotionRadios.addEventListener('change', highlightCheckedOption)
 memeModalCloseBtn.addEventListener('click', closeModal)
 getImageBtn.addEventListener('click', renderCat)
 
-memeModal.addEventListener('click', closeModalBack)
+modalBack.addEventListener('click', closeModalBack)
 
 function closeModalBack(e){
-    const isOutside = !e.target.closest(memeModalInner);
+    const isOutside = !e.target.closest(memeModal);
     if (isOutside){
         closeModal()
     }
