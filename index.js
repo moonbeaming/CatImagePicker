@@ -17,7 +17,7 @@ memeModal.addEventListener('click', closeModalBack)
 document.addEventListener('click', (e) => {
     const memeModalOuter = document.querySelector('.meme-modal-outer')
 
-    if(e.target == memeModalOuter){
+    if(e.target != memeModalOuter){
         closeModal()
     }
     // else if (e.target == boxmodal){
