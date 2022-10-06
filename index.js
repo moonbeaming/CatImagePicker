@@ -105,7 +105,7 @@ function renderEmotionsRadios(cats){
     }
     emotionRadios.innerHTML = radioItems
 }
-
+console.log(catsData)
 renderEmotionsRadios(catsData)
 
 
