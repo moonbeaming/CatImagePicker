@@ -6,28 +6,20 @@ const gifsOnlyOption = document.getElementById('gifs-only-option')
 const memeModalInner = document.getElementById('meme-modal-inner')
 const memeModal = document.getElementById('meme-modal')
 const memeModalCloseBtn = document.getElementById('meme-modal-close-btn')
-// const memeModalOuter = document.getElementById('meme-modal-outer')
 
 emotionRadios.addEventListener('change', highlightCheckedOption)
 memeModalCloseBtn.addEventListener('click', closeModal)
 getImageBtn.addEventListener('click', renderCat)
-memeModal.addEventListener('click', closeModalBack)
-
 
 document.addEventListener('click', (e) => {
-    const memeModalOuter = document.querySelector('.meme-modal-outer')
-
-    if(e.target != memeModalOuter){
+        if(e.target == mainBox){
         closeModal()
-    }
-    // else if (e.target == boxmodal){
-    //        return;
-    // }
-    else{}
-})
-// function closeModalBack(){
-//     memeModal.classList.display='none'
-// }
+        }
+        else{
+            return;
+        }
+    })
+
 
 function highlightCheckedOption(e){
     const radios = document.getElementsByClassName('radio')
@@ -38,9 +30,6 @@ function highlightCheckedOption(e){
 }
 
 function closeModal(e){
-    // e.preventDefault();
-    // e.stopPropagation();
-    // e.stopImmediatePropagation();
     memeModal.style.display = 'none'
 }
 
