@@ -2,7 +2,7 @@
 
 ## About Project
 
-This is a website I created with what I learnt from Scrimba's Frontend Career Path Course, using HTML, CSS, and vanilla Javascript. It provides pictures at random, from a couple of images provided by [Scrimba](https://scrimba.com/), matching whichever emotion you want the cat in the image to have. You can access the website [here](https://cat-image-picker.vercel.app/).
+This is a website I created with what I learnt from Scrimba's Frontend Career Path Course, using **HTML5**, **CSS3**, and **Javascript ES6**. It provides pictures at random, from a couple of images provided by [Scrimba](https://scrimba.com/), matching whichever emotion you want the cat in the image to have. You can access the website [here](https://cat-image-picker.vercel.app/).
 
 ## Features
 
